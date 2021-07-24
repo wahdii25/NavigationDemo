@@ -30,5 +30,9 @@
         android:id="@+id/thankYouFragment"
         android:name="com.example.navigationdemo.ThankYouFragment"
         android:label="fragment_thank_you"
-        tools:layout="@layout/fragment_thank_you" />
+        tools:layout="@layout/fragment_thank_you" >
+        <argument
+            android:name="score"
+            app:argType="float" />
+    </fragment>
 </navigation>

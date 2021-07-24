@@ -82,8 +82,9 @@ class QuestionFragment : Fragment() {
 
                 } else {
                     // todo:: navigate to thankyou fragment
-                    Navigation.findNavController(it)
-                        .navigate(R.id.action_questionFragment_to_thankYouFragment)
+                    var percentage = (score.toFloat() / questions.size.toFloat()) * 100
+                        val action = QuestionFragmentDirections.actionQuestionFragmentToThankYouFragment(percentage)
+                    Navigation.findNavController(it).navigate(action)
 
                 }
             } else {
